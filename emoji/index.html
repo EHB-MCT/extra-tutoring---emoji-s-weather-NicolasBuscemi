@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-  
   <title>Emoji</title>
   <style>
     body {
@@ -20,14 +19,22 @@
     }
   </style>
 </head>
-
 <body>
   <h1>Emojipedia</h1>
+  <div id="filterButtons">
+    <button onclick="filterEmojiByGroup('people')">People</button>
+    <button onclick="filterEmojiByGroup('animals-nature')">Animals & Nature</button>
+    <button onclick="filterEmojiByGroup('food-drink')">Food & Drink</button>
+    <!-- Add more buttons for other emoji groups as needed -->
+  </div>
+  <form id="searchForm">
+    <label for="search">Search:</label>
+    <input type="text" id="search" />
+    <input type="submit" value="Search" />
+  </form>
   <ul id="list">
     <li>Loading...</li>
-    <!-- <li>😀 grinning face</li> -->
   </ul>
-  <script type="module" src="./index.js" defer></script>
+  <script src="./index.js"></script>
 </body>
-
 </html>
